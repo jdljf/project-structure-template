@@ -1,29 +1,27 @@
-# project-template
+# project-structure-template
 
-## Project setup
-```
-npm install
-```
+## 运行项目（前提是电脑安装了 git ），打开 cmd 输入以下命令
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+git clone https://github.com/jdljf/project-structure-template.git
+npm install 或者 cnpm install
+npm run dev 或者 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包本项目
+
 ```
 npm run build
 ```
 
-### Run your tests
+### 测试本项目
+
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### 格式化项目代码风格和要求
+
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
