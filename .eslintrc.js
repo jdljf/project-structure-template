@@ -53,7 +53,6 @@ module.exports = {
     "no-extra-bind": "error", // 禁止不必要的 .bind() 调用
     "no-extra-label": "error", // 禁用不必要的标签
     "no-floating-decimal": "error", // 禁止数字字面量中使用前导和末尾小数点
-    "no-implicit-coercion": "error", // 禁止使用短符号进行类型转换
     "no-labels": "error", // 禁用标签语句
 
     /**
