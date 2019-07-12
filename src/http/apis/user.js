@@ -6,10 +6,10 @@ import { mock, api } from "@/http/baseIP.js"
  */
 export default {
   login({ userName, password }) {
-    let isMock = false
+    let isMock = true
     let url = isMock ? `${mock}/login` : `${api}/login`
 
-    return request.get(url, {
+    return request.post(url, {
       userName,
       password
     })
