@@ -8,32 +8,33 @@
          target="_blank"
          rel="noopener">vue-cli documentation</a>.
     </p>
+    <icon-svg iconClass="jian"></icon-svg>
+    <svg>
+      <use xlink:href="#jian" />
+    </svg>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "HelloWorld",
   props: {
     msg: String
   },
   mounted() {
-    console.log(process.env)
     this.login()
   },
   methods: {
-    aaa() {
-      let a = 1
-      if (a === 1) {
-        console.log("ooooo")
-      }
-    },
     async login() {
-      let res = await this.$api.user.login({
-        userName: "123",
-        password: "123"
-      })
-      console.log(res)
+      try {
+        await this.$api.user.login({
+          userName: "000",
+          password: "123"
+        })
+      } catch (e) {
+        console.log(e);
+      }
     }
   }
 };

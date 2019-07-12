@@ -72,14 +72,27 @@ instance.interceptors.request.use(
 // 响应拦截器
 instance.interceptors.response.use(
   // 请求成功
-  res =>
-    res.status === 200 ? Promise.resolve(res.data) : Promise.reject(res.data),
+  response => {
+    let res = response.data
+
+    if (res.code !== 200) {
+      if (res.code === 508 || res.code === 512 || res.code === 514) {
+        alert('重新登录')
+      }
+      return Promise.reject(res)
+    }
+    else {
+      return Promise.resolve(res)
+    }
+  },
   // 请求失败
   error => {
+    console.log(error);
     const { response } = error
+
     if (response) {
       // 请求已发出，但是不在2xx的范围
-      errorHandle(response.status, response.data.message)
+      errorHandle(response.data.code, response.data.message)
       return Promise.reject(response)
     } else {
       // 处理断网的情况

@@ -46,5 +46,23 @@ module.exports = {
         "@": resolve("src")
       }
     }
+  },
+  chainWebpack: config => {
+    config.module.rules.delete("svg")
+    config.module
+      .rule("svg")
+      .exclude.add(resolve("src/icons/svg"))
+      .end()
+    config.module
+      .rule("icons")
+      .test(/\.svg$/)
+      .include.add(resolve("src/icons/svg"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId: "[name]"
+      })
+      .end()
   }
 }
