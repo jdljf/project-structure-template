@@ -1,5 +1,5 @@
 import request from "@/http/config.js"
-import { mock, api } from "@/http/baseIP.js"
+import { mock, api } from "@/http/baseIP.js" // 域名
 
 /**
  * 用户模块的接口
@@ -7,7 +7,7 @@ import { mock, api } from "@/http/baseIP.js"
 export default {
   login({ userName, password }) {
     let isMock = true
-    let url = isMock ? `${mock}/login` : `${api}/login`
+    let url = isMock ? `${mock}/user/login` : `${api}/user/login`
 
     return request.post(url, {
       userName,

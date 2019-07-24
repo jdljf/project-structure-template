@@ -8,10 +8,15 @@
          target="_blank"
          rel="noopener">vue-cli documentation</a>.
     </p>
+    <icon-svg iconClass="jian"></icon-svg>
+    <svg>
+      <use xlink:href="#jian" />
+    </svg>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "HelloWorld",
   props: {
@@ -23,10 +28,12 @@ export default {
   methods: {
     async login() {
       try {
-        await this.$api.user.login({
-          userName: "000",
+        let res = await this.$api.user.login({
+          userName: "123",
           password: "123"
         })
+        console.log(res);
+
       } catch (e) {
         console.log(e);
       }
