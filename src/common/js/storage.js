@@ -18,7 +18,7 @@ export default {
     return window.sessionStorage.setItem(name, value)
   },
   /**
-   * 设置sessionStorage的键值数据
+   * 移除sessionStorage的键值数据
    * @param {String} name 键值名
    */
   removeSesStorage(name) {
