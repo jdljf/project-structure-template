@@ -28,10 +28,12 @@ export default {
   methods: {
     async login() {
       try {
-        await this.$api.user.login({
-          userName: "000",
+        let res = await this.$api.user.login({
+          userName: "123",
           password: "123"
         })
+        console.log(res);
+
       } catch (e) {
         console.log(e);
       }
