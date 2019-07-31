@@ -2,18 +2,103 @@
 .fl {
   float: left;
 }
+
 .fr {
   float: right;
 }
+
 .al {
   text-align: left;
 }
+
 .ac {
   text-align: center;
 }
+
 .ar {
   text-align: right;
 }
+
 .hide {
   display: none;
+}
+
+.deepTheme {
+  color: #2b80ff;
+}
+
+.simpleTheme {
+  color: #4090ff;
+}
+
+.deepItem {
+  color: #99c1f9;
+}
+
+.simpleItem {
+  color: #d7e5f9;
+}
+
+.deepAuxiliary {
+  color: #dee2ee;
+}
+
+.normalAuxiliary {
+  color: #ecf0f7;
+}
+
+.simpleAuxiliary {
+  color: #f8fafd;
+}
+
+.mainHeader {
+  color: #2d405e;
+}
+
+.subHeader {
+  color: #4f5e7b;
+}
+
+.content {
+  color: #879bba
+}
+
+.editor {
+  color: #5c7ab0;
+}
+
+.ban {
+  color: #cad0d7;
+}
+
+.primary {
+  color: #37c0cd;
+}
+
+.danger {
+  color: #f86359;
+}
+
+.warning {
+  color: #f5b923;
+}
+
+.font24 {
+  font-size: 24px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font12 {
+  font-size: 12px;
 }

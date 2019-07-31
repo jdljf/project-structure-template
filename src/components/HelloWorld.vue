@@ -16,7 +16,7 @@
 </template>
 
 <script>
-
+import { debounce } from '@/common/js/common.js'
 export default {
   name: "HelloWorld",
   props: {
@@ -24,6 +24,8 @@ export default {
   },
   mounted() {
     this.login()
+
+    debounce(function () { console.log('debounce') }, 500, true)()
   },
   methods: {
     async login() {
